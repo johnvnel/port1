@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="Project - 8" content="p8_1">
+        <meta name="author" content="John Nelson">
+
+        <title>Project - 8</title>
+
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+        <!--Stylesheets and reset css files-->
+
+        <style>
+
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+
+        </style>
+        <!--default font-->
+
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous">
+        </script>
+
+        <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous">
+        </script>
+        <!--JQuerry-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
+        <!--JQuerry Validator-->
+
+        <script src="script/script.js"></script>
+        <!--bmi calculator script-->
+
+        <script>
+
+            $(function(){
+
+                $('li').click(function(){
+
+                    var tabstate = $(this).hasClass("acttab");
+                    
+                    //checking to see if the clicked tab is active; if yes, no action, and if not it will turn inactive
+                    if(tabstate == false){
+
+                        $('.acttab').addClass('hidtab');
+                        $('.acttab').removeClass('acttab');
+                        $(this).addClass('acttab');
+
+                    }
+
+                    //if the inactive tab has been selected, it will swtitch; otherwise no action
+                    var pan = $(this).attr('rel');
+                    var state = $('#'+pan).hasClass("active");
+
+                    if (state == false){
+
+                        $('.active').addClass('hidden');
+                        $('.active').removeClass('active');
+                        $('#'+pan).addClass('active');
+
+                    }
+
+                });
+
+                //accepts input from the metric input form
+                $("#met").submit(function(e){
+
+                    e.preventDefault();
+
+                    var htcm = Number($("#heightcms").val());
+                    var wtkg = Number($("#weightkgs").val());
+
+                    $('#metbmi').empty();
+                    var mBMI = calculateMetricBMI(htcm, wtkg);
+                    $('#metbmi').append("Your BMI is: " +mBMI);
+
+                });
+
+                //accepts input from the standard input form
+                $("#std").submit(function(e){
+
+                    e.preventDefault();
+
+                    var wtlb = Number($("#weightlbs").val());
+                    var htft = Number($("#heightft").val());
+                    var htin = Number($("#heightin").val());
+
+                    $('#stdbmi').empty();
+                    var sBMI = calculateStandardBMI(htft, htin, wtlb);
+                    $('#stdbmi').append("Your BMI is: " +sBMI);
+
+                });
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="main_container">
+
+            <table id="info">
+
+                <tbody>
+
+                    <tr>
+                        <th>BMI</th>
+                        <th>Category</th>
+                    </tr>
+    
+                    <tr>
+                        <td>< 18.5</td>
+                        <td>Underweight</td>
+                    </tr>
+    
+                    <tr>
+                        <td>18.5 - 24.9</td>
+                        <td>Normal</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>25 - 29.9</td>
+                        <td>Overweight</td>
+                    </tr>
+    
+                    <tr>
+                        <td>> 30</td>
+                        <td>Obese</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div id="input">
+                
+                <ul id="tabs">
+
+                    <li class="hidtab" id="tab" rel="metricInp">Metric</li>
+                    <li class="acttab" id="tab" rel="stdInp">Standard</li>
+
+                </ul>
+
+                <div id="metricInp" class="hidden">
+
+                    <form id="met">
+
+                        <label for="heightcms">Height: </label>
+
+                        <table>
+
+                            <tbody>
+
+                                <tr><td><input class="enter" id="heightcms" name="heightcms" type="number" required></td></tr>
+                                <tr><td>(cms)</td></tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <label for="weightkgs">Weight: </label>
+
+                        <table>
+
+                            <tbody>
+
+                                <tr><td><input class="enter" id="weightkgs" name="weightkgs" type="number" required></td></tr>
+                                <tr><td>(kgs)</td></tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <input type="submit" value="Calculate BMI" id="submit" name="submit">
+
+                    </form>
+
+                    <p id="metbmi">Your BMI is: </p>
+
+                </div>
+
+                <div id="stdInp" class="active">
+
+                    <form id="std">
+
+                        <label for="heightftin">Height: </label>
+
+                        <table>
+
+                            <tbody>
+
+                                <tr><td><input class="enter" type="number" id="heightft" name="ft" type="text" required></td><td><input type="number" class="enter" id="heightin" name="in" type="text" required></td></tr>
+                                <tr><td>(feet)</td><td>(inches)</td></tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <label for="weightlbs">Weight: </label>
+
+                        <table>
+
+                            <tbody>
+                                
+                                <tr><td><input type="number" class="enter" id="weightlbs"  name="weightlbs" required></td></tr>
+                                <tr><td>(lbs)</td></tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <input type="submit" value="Calculate BMI" id="submit" name="submit">
+
+                    </form>
+
+                    <p id="stdbmi">Your BMI is: </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
