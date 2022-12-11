@@ -133,6 +133,16 @@ body {
 .a5 {
     background-image: url(../images/bmi-tile-img.jpg); 
 }
+
+.a6 {
+    background-image: url(../images/symbiosis-tile.png); 
+}
+
+.a7 {
+    background-image: url(../images/car-tile.jpeg); 
+    color: #fff;
+}
+
 p {
     font-weight: normal;
     font-family: 'Encode Sans Expanded', sans-serif !important;
