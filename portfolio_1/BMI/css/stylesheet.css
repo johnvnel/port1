@@ -1,0 +1,123 @@
+/*
+ #A9A9A9
+*/
+
+#logo {
+    width: 25em;
+    height: auto;
+}
+
+#main_container {
+    margin: 8em auto;
+    width: 50%;
+    height: 16em;
+    background-color: black;
+    color: white;
+    padding: 2em 0;
+}
+
+#info {
+    display: inline-block;
+    height: 15em;
+}
+
+#input {
+    display: inline-block;
+    position: relative;
+    color: #222222;
+    margin-left: 6em;
+    padding: 2em auto;
+}
+
+#footerHome {
+    text-decoration: none;
+    display: block;
+}
+
+#info th {
+    text-align: center;
+    padding: 0.5em 0.2em;
+}
+
+#info td {
+    text-align: center;
+    padding: 0.5em 0.2em;
+    border: whitesmoke 0.5px solid;
+}
+
+li {
+    display: inline-block;
+    background-color: white;
+    padding: 0.5em 1em;
+    width: 8em;
+    color: #222222;
+    border-radius: 40% 40% 0 0;
+}
+
+.enter {
+    width: 4em;
+}
+
+#stdInp {
+    background-color: white;
+    padding: 0.1em 1em;
+}
+
+#metricInp {
+    background-color: white;
+    padding: 0.1em 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.hidtab {
+    background-color: silver;
+}
+
+.acttab {
+    background-color: white;
+}
+
+#stdbmi {
+    font-size: 1.5em;
+    margin: 1em auto;
+}
+
+#metbmi {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#footerHome {
+    display: block;
+    position: relative;
+    margin-top: 12em;
+}
+
+/* submit button */
+
+#submit {
+	background-color:#44c767;
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:12px 18px;
+	text-decoration:none;
+}
+#submit:hover {
+	background-color:#9eff69;
+}
+#submit:active {
+	position:relative;
+	top:1px;
+}

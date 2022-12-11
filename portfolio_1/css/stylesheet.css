@@ -1,0 +1,282 @@
+html{
+    font-family: 'Encode Sans Expanded', sans-serif !important;
+}
+
+.bg-dark {
+    background-color: #333333 !important;
+}
+
+body {
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+}
+
+.nav-item {
+    padding-right: 40px;
+}
+
+.home-page-content {
+    text-align: center;
+    padding-top: 170px;
+}
+
+.home-page-content-logo {
+    padding-bottom: 50px;
+}
+
+.home-page-content h1 {
+    font-weight: 400;
+}
+
+hr {
+    color: #333333;
+    display: inline-block;
+    width: 70px;
+    size: 10px;
+}
+
+.job-title {
+    font-weight: 300;
+}
+
+.about-link {
+    font-weight: 200;
+    padding-top: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.footer {
+    background-color: #333333 !important;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer-fixed {
+    background-color: #333333 !important;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer-text {
+    font-weight: 100;
+    opacity: 50%;
+    font-family: 'Encode Sans Expanded', sans-serif !important;
+}
+
+/* Accordion CSS */
+
+html {
+    height: 100vh;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background: linear-gradient( #fff, #fefefe, #eaeaea);
+}
+.accordion {
+    max-width: 990px;
+    background: rgba(0, 0, 0, 0.10);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.box {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-position: left;
+    background-size: cover;
+    transition: .7s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 7;
+    height: 400px;
+}
+.a1 {
+    background-image: url(../images/pandemicJatte2.jpg);
+}
+.a2 {
+    background-image: url(../images/works-2.png)
+}
+.a3 {
+    background-image: url(../images/nerd-find-tile-img.png);
+    color: #fff;
+}
+.a4 {
+    background-image: url(../images/credit-card-tile-img.jpg);
+    color: #fff;
+}
+.a5 {
+    background-image: url(../images/bmi-tile-img.jpg); 
+}
+
+.a6 {
+    background-image: url(../images/symbiosis-tile.png); 
+}
+
+.a7 {
+    background-image: url(../images/car-tile.jpeg); 
+    color: #fff;
+}
+
+p {
+    font-weight: normal;
+    font-family: 'Encode Sans Expanded', sans-serif !important;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+.box:hover .text{
+    opacity:1;
+}
+.head-works {
+    width: 250px;
+    text-align: center;
+    margin: 100px auto 20px auto;
+}
+@media screen and (max-width: 800px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+
+/* About me section */ 
+
+.container {
+    text-align: center;
+}
+
+.center-box {
+    text-align: center;
+}
+
+#about-me-box {
+	margin: 50px auto;
+	background-color: #fff; 
+	box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+	display: block;
+	padding: 0 10px 0 0;
+    width: 900px;
+}
+
+.about-me-h {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.about-buttons {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.prof-img {
+    width: 400px;
+    height: auto;
+    margin: 20px 20px;
+}
+
+@media (max-width: 767px) {
+	#about-me-box {
+		padding: 0 10px;	
+	}
+	/*responsive helper classes*/
+	.hidden-xs {
+		display: none;
+	}
+	.max-width-xs {
+		width: 100%;	
+    }
+
+    .footer-fixed {
+        position: fixed;
+    }
+
+}
+
+/*END*/
+
+/* Button */ 
+
+.myButton {
+	background-color:#599bb3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Encode Sans Expanded', sans-serif !important;
+	font-size:17px;
+	padding:16px 40px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#408c99;
+    color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+/*END*/
+
+.contact-form {
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.submit-button {
+    margin: 100px auto;
+}
+
+.works-content {
+    margin: 40px 40px;
+    display: inline-block;
+}
+
+.img-group{
+    text-align: center;
+}
+
+.img-content-works {
+    width: 500px;
+    height: 500px;
+}
