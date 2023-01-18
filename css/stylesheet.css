@@ -229,6 +229,15 @@ p {
         position: fixed;
     }
 
+    .a7 {
+        margin-bottom: 50px;
+    }
+
+    .head-works {
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
 }
 
 /*END*/
